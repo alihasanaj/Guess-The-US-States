@@ -54,7 +54,7 @@ while True:
 
 # states_to_learn.csv
 all_states = state_data.state
-practice_list = numpy.setdiff1d(all_states, guessed_states)
+practice_list = [state for state in all_states if state not in guessed_states]
 
 df = pandas.DataFrame({
     "Missing" : practice_list
